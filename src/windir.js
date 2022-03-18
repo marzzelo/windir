@@ -1,29 +1,90 @@
-function windir(wrotation) {
+function windir(wrotation, lang = 'en', mode = 's') {
   const degree = parseFloat(wrotation); // global.get("homeassistant.homeAssistant.states['sensor.outdoor_wind_bearing'].state")
-  const direction = [
-    "Norte",
-    "Nor Noreste",
-    "Noreste",
-    "Este Noreste",
-    "Este",
-    "Este Sureste",
-    "Sureste",
-    "Sur Sureste",
-    "Sur",
-    "Sur Suroeste",
-    "Suroeste",
-    "Oeste Suroeste",
-    "Oeste",
-    "Oeste Noroeste",
-    "Noroeste",
-    "Nor Noroeste",
-    "Norte",
-  ];
+  const direction = {
+    es: {
+      l: [
+        'Norte',
+        'Nor Noreste',
+        'Noreste',
+        'Este Noreste',
+        'Este',
+        'Este Sureste',
+        'Sureste',
+        'Sur Sureste',
+        'Sur',
+        'Sur Suroeste',
+        'Suroeste',
+        'Oeste Suroeste',
+        'Oeste',
+        'Oeste Noroeste',
+        'Noroeste',
+        'Nor Noroeste',
+        'Norte',
+      ],
+      s: [
+        'N',
+        'NNO',
+        'NE',
+        'ENE',
+        'E',
+        'ESE',
+        'SE',
+        'SSE',
+        'S',
+        'SSO',
+        'SO',
+        'OSO',
+        'O',
+        'ONO',
+        'NO',
+        'NNO',
+        'N',
+      ],
+    },
+    en: {
+      l: [
+        'North',
+        'North-northeast',
+        'Northeast',
+        'East-northeast',
+        'East',
+        'East-southeast',
+        'Southeast',
+        'South-southeast',
+        'South',
+        'South-southwest',
+        'Southwest',
+        'West-southwest',
+        'West',
+        'West-northwest',
+        'Northwest',
+        'North-northwest',
+      ],
+      s: [
+        'N',
+        'NNE',
+        'NE',
+        'ENE',
+        'E',
+        'ESE',
+        'SE',
+        'SSE',
+        'S',
+        'SSW',
+        'SW',
+        'WSW',
+        'W',
+        'NWN',
+        'NW',
+        'NNW',
+      ],
+    },
+  };
   const index = Math.trunc((degree + 11.25) / 22.5);
 
-  return { index, direction: direction[index] };
+  return direction[lang][mode][index];
 }
 
 module.exports = {
-  windir
-}
+  windir,
+};
