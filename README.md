@@ -3,16 +3,16 @@
 Converts wind direction from degrees to cardinal points
 
 
-### Install  ??
+### Install
 
 From npm:
 
 ```
-$ npm install @marzzelo/windir
+npm install @marzzelo/windir
 ````
 
 
-## Usage ??
+## Usage
 
 ```
 const { windir } = require('./windir');
@@ -21,10 +21,10 @@ console.log(`dir: ${windir('270').direction}`);
 // dir: Oeste  (West)
 ```
 
-## Licence ??
+## Licence
 
 MIT
 
 
 ---
-?? con ?? por Marzzelo ?? from Córdoba, Argentina.
+Marzzelo from Córdoba, Argentina.
