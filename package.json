@@ -1,0 +1,22 @@
+{
+  "name": "@marzzelo/windir",
+  "version": "1.0.4",
+  "description": "Converts wind direction from degrees to cardinal points",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marzzelo/windir.git"
+  },
+  "keywords": [
+    "Home-Assistant"
+  ],
+  "author": "Marcelo Valdez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marzzelo/windir/issues"
+  },
+  "homepage": "https://github.com/marzzelo/windir#readme"
+}
