@@ -2,7 +2,7 @@
   "name": "@marzzelo/windir",
   "version": "1.0.4",
   "description": "Converts wind direction from degrees to cardinal points",
-  "main": "src/index.js",
+  "main": "src/windir.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
