@@ -4,7 +4,7 @@
   "description": "Converts wind direction from degrees to cardinal points",
   "main": "src/windir.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node src/index"
   },
   "repository": {
     "type": "git",

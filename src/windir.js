@@ -84,8 +84,8 @@ function windir(wrotation, lang = 'en', mode = 's', npoints = 16) {
   };
 
   const step = 360 / npoints;
-  
-  const index = Math.trunc((degree + step / 2) / step) * 16/npoints;
+
+  const index = (Math.trunc((degree + step / 2) / step) * 16) / npoints;
 
   return direction[lang][mode][index];
 }
