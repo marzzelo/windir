@@ -1,6 +1,6 @@
 {
   "name": "@marzzelo/windir",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Converts wind direction from degrees to cardinal points",
   "main": "src/windir.js",
   "scripts": {
