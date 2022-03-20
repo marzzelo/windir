@@ -27,9 +27,14 @@ const cpen = windir(wind_bearing, 'en', 's');
 const cpen8 = windir(wind_bearing, 'en', 'l', 8);
 const cpes16 = windir(wind_bearing, 'es', 'l', 4);
 
-console.log(`Punto cardinal @${wind_bearing} deg: ${cpen}`);
-console.log(`Cardinal Point @${wind_bearing} deg: ${cpen8}`);
-console.log(`Cardinal Point @${wind_bearing} deg: ${cpes16}`);
+console.log(`Cardinal Point 16p (en, s) @${wind_bearing} deg: |${cpen}|`);
+console.log(`Cardinal Point  8p (en, l) @${wind_bearing} deg: |${cpen8}|`);
+console.log(`Punto cardinal  4p (es, l) @${wind_bearing} deg: |${cpes16}|`);
+
+// OUTPUT:
+// Cardinal Point 16p (en, s) @150 deg: |SSE|
+// Cardinal Point  8p (en, l) @150 deg: |Southeast|
+// Punto cardinal  4p (es, l) @150 deg: |Sur|
 ```
 
 ## Available Options @v1.1
