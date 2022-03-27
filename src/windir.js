@@ -1,6 +1,7 @@
 function windir(wrotation, lang = 'en', mode = 's', npoints = 16) {
   const degree = parseFloat(wrotation); // global.get("homeassistant.homeAssistant.states['sensor.outdoor_wind_bearing'].state")
-  const direction = {
+  if (lang === 'sp') lang = 'es';
+  const DIRECTION = {
     es: [
       'N|Norte',
       'NNO|Nor Noreste',
@@ -41,11 +42,9 @@ function windir(wrotation, lang = 'en', mode = 's', npoints = 16) {
     ],
   };
 
-  const step = 360 / npoints;
-
+  const step = 360 / +npoints;
   const index = (Math.trunc((degree + step / 2) / step) * 16) / npoints;
-
-  return direction[lang][index].split('|')[(['s','l'].indexOf(mode))].trim();
+  return DIRECTION[lang][index].split('|')[['s', 'l'].indexOf(mode)].trim();
 }
 
 module.exports = {

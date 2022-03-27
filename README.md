@@ -22,19 +22,14 @@ npm install marzzelo/windir
 ```js
 const { windir } = require('./windir');
 
-const wind_bearing = '150';
-const cpen = windir(wind_bearing, 'en', 's');
-const cpen8 = windir(wind_bearing, 'en', 'l', 8);
-const cpes16 = windir(wind_bearing, 'es', 'l', 4);
+// Default options (english, short format, 16 cardinal points):
+const WIND_BEARING = '150';
+console.log(`Wind direction: ${windir(WIND_BEARING)}`); // 'SSE'
 
-console.log(`Cardinal Point 16p (en, s) @${wind_bearing} deg: |${cpen}|`);
-console.log(`Cardinal Point  8p (en, l) @${wind_bearing} deg: |${cpen8}|`);
-console.log(`Punto cardinal  4p (es, l) @${wind_bearing} deg: |${cpes16}|`);
+// Custom options (Spanish, long format, 8 cardinal points):
+const SP8 = windir(WIND_BEARING, 'es', 'l', 8);
+console.log(`Direccion del viento: ${SP8}`); // 'Sureste'
 
-// OUTPUT:
-// Cardinal Point 16p (en, s) @150 deg: |SSE|
-// Cardinal Point  8p (en, l) @150 deg: |Southeast|
-// Punto cardinal  4p (es, l) @150 deg: |Sur|
 ```
 
 ## Available Options @v1.1
