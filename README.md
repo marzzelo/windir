@@ -32,10 +32,10 @@ console.log(`Direccion del viento: ${SP8}`); // 'Sureste'
 
 ```
 
-## Available Options @v1.1
+## Available Options @v1.2
 `windir(angle [[[,lang], mode], points])`
 ```
-lang: 'en' | 'es'   
+lang: 'en' | 'es|sp'   
 mode: 's'  | 'l'          // short | long
 np:    16  |  8  |  4     // 4:  N, S, E, W
 ```
